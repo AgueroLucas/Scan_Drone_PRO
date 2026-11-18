@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Drone People Counter Pro - dependencias de ejecución (Windows 10/11)
+# Python 3.10 - 3.12 recomendado (64 bits)
+# ---------------------------------------------------------------------------
+
+# Modelo YOLO11 (y compatibilidad con YOLOv8). Instala PyTorch/torchvision.
+ultralytics>=8.3.0,<9.0
+# Ultralytics lo usa internamente para el tracker YOLO (no es el nuestro, pero
+# evitar que lo instale automáticamente en la primera ejecución).
+lap>=0.5.12
+
+# Visión por computador y interfaz gráfica.
+opencv-python>=4.10.0.84
+PyQt6>=6.6.1
+
+# Datos y cálculo científico. La asignación húngara de ByteTrack usa SciPy si
+# está instalado y, si no, un implementación interna en Python puro.
+pandas>=2.2.0
+numpy>=1.26.0,<3.0
+# Opcional (recomendado): acelera la asociación en escenas muy concurridas.
+# scipy>=1.12.0
+
+# Nota CUDA: la rueda estándar de PyTorch incluye soporte CUDA 12.1 en Windows.
+# Si torch.cuda.is_available() devuelve False, instala primero el driver NVIDIA
+# y, si hace falta, reinstalla torch desde:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# La aplicación detecta automáticamente GPU y degrada a CPU si no hay CUDA.

@@ -1,0 +1,3 @@
+# Dependencias adicionales sólo para generar el ejecutable .exe.
+# Uso: pip install -r requirements-build.txt
+pyinstaller>=6.0,<7.0

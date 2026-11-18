@@ -1,0 +1,24 @@
+# Entornos y cachés
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# Artefactos generados en ejecución
+logs/*.log*
+exports/
+*.tmp.csv
+
+# Pesos de modelos (se descargan o se copian manualmente)
+models/*.pt
+models/*.onnx
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

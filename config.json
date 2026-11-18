@@ -1,0 +1,26 @@
+{
+  "use_gpu": true,
+  "detection": {
+    "model_path": "yolo11n.pt",
+    "min_confidence": 0.5,
+    "low_score_factor": 0.5,
+    "iou": 0.45,
+    "image_size": 640,
+    "fp16": true,
+    "max_detections": 300
+  },
+  "tracking": {
+    "match_threshold": 0.8,
+    "low_match_threshold": 0.7,
+    "max_lost": 30
+  },
+  "video": {
+    "target_fps": 30,
+    "resolution": "auto",
+    "buffer_size": 1,
+    "rtsp_transport": "udp",
+    "autosave_seconds": 3.0
+  },
+  "export_path": "exports",
+  "export_filename": "detecciones.csv"
+}
